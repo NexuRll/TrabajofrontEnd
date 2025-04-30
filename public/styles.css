@@ -1,30 +1,37 @@
 /* Reset y estilos generales */
-* {
+* { /* usar el asterico significa que afecta a todo el html de la pagina*/
     margin: 0;
-    padding: 0;
+    padding: 0; /* es el espacio que hay entre el contenido y el borde */
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    background-color: #f9f9f7;
-    color: #333;
+    background-color: #f9f9f7; /* color de fondo de nuestra mision*/
+    color: #333; /* color de texto */
     line-height: 1.6;
 }
 
 /* Header */
 header {
     background-color: #CFD8B3;
-    color: rgb(0, 0, 0);
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
+    color: #333; /* color de texto */
+    padding: 1rem 2rem; /* esto es equivalente a decir 10 en vertical y 20 en horizontal, por que 20 por que seria el doble del 1rem */
+    display: flex; /* display flex es para sea mas flexible el header */
+    justify-content: space-between; /* Coloca el primer elemento al inicio y el último al final*/
     align-items: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    /* esto es para que el header se quede fijo, la barra de arriba pero oculta todo lo demas
+    position: fixed;  Hace que el header se quede fijo 
+    top: 0;           Se queda en la parte superior 
+    left: 0;          Se queda en el borde izquierdo 
+    width: 100%;      Ocupa toda la anchura de la ventana 
+    z-index: 1000;    Asegura que esté por encima de otros elementos 
+    */
 }
 
 .logo {
-    font-size: 1.8rem;
+    font-size: 1.8rem; /* quiero que el logo sea un poco más grande que el texto normal (font-size)es decir 1.8 mas grande que el texto*/
     font-weight: bold;
 }
 
@@ -34,7 +41,7 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 1.5rem;
+    margin-left: 1.5rem; /* Crea un espacio de 1.5 veces el tamaño base hacia la izquierda de cada elemento */
 }
 
 nav ul li a {
@@ -49,18 +56,46 @@ nav ul li a:hover {
 }
 
 /* seccion hero */
+/*Esto es la imagen de la ensalada del fondo */
 .hero {
     background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');
+    /* Crea una imagen de fondo con dos capas:
+       - Una capa de gradiente negro semi-transparente
+       - Una imagen de ensalada debajo
+       - El gradiente ayuda a que el texto sea más legible */
+
     background-size: cover;
+    /* Hace que la imagen ocupe todo el espacio disponible
+       sin deformarse, manteniendo su proporción */
+
     background-position: center;
+    /* Centra la imagen en el medio del contenedor */
+
     height: 60vh;
+    /* El contenedor ocupa 60% de la altura de la ventana
+       (vh = viewport height) */
+
     display: flex;
+    /* Hace que el contenido se organice de manera flexible */
+
     flex-direction: column;
+    /* Organiza el contenido en una columna vertical */
+
     justify-content: center;
+    /* Centra el contenido verticalmente */
+
     align-items: center;
+    /* Centra el contenido horizontalmente */
+
     text-align: center;
+    /* Centra el texto dentro de los elementos */
+
     color: white;
+    /* El texto será blanco para contrastar con el fondo */
+
     padding: 0 2rem;
+    /* Espacio de 2rem hacia los lados (horizontal)
+       y 0 hacia arriba y abajo (vertical) , por que vamos hacer que ocupe todo el espacio que le damos*/
 }
 
 .hero h1 {
@@ -74,6 +109,7 @@ nav ul li a:hover {
     max-width: 600px;
 }
 
+/* Este es para el unico boton, donde dice mas inforamcion */
 .btn {
     display: inline-block;
     background-color: #CFD8B3;
@@ -85,13 +121,15 @@ nav ul li a:hover {
     transition: all 0.3s;
 }
 
+/* Este es para darle el efecto de cuando se pasa por arriba el color cambie */
 .btn:hover {
     background-color: #3a7320;
-    transform: translateY(-3px);
+    transform: translateY(-3px); /* Hace que el boton suba un poco cuando se pasa por encima */
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 /* Sección de características */
+/* esto es para la parte de Nuestra mision*/
 .features {
     padding: 4rem 2rem;
     text-align: center;
