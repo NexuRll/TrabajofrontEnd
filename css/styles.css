@@ -35,9 +35,43 @@ header {
     font-weight: bold;
 }
 
-nav ul {
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.main-nav {
     display: flex;
     list-style: none;
+    gap: 2rem;
+    margin: 0;
+    flex: 1; /* Esto hace que se ponga en el medio, junto con el margin*/
+    justify-content: center;
+    margin-left: 100px; /* ademas esto tambien ayuda a que se ponga en el medio */
+}
+
+.auth-nav {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    margin: 0;
+}
+
+.auth-nav li a {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    background-color: #CFD8B3;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.auth-nav li a:hover {
+    background-color: #3a7320;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
 }
 
 nav ul li {
