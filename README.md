@@ -1,6 +1,1 @@
-franco:ya creamos un grupo de wasap
-
-
-
-
-Recuerden agregar al profe Ahumadacortesjavier@gmail.com
+yo dije que lo iba a hacer en 3 hras pero me demore menos si falta algo me avisan 
