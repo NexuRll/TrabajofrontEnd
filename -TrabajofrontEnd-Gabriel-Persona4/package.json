@@ -1,0 +1,24 @@
+{
+  "name": "-trabajofrontend",
+  "version": "1.0.0",
+  "description": "soy franco el de lentes que esta con ustedes en frontend, no puede ur hoy 23/04/2025 por que me cayo mal un sushi, como se quieren comunicar por wasap o discord ?",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NexuRll/-TrabajofrontEnd.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NexuRll/-TrabajofrontEnd/issues"
+  },
+  "homepage": "https://github.com/NexuRll/-TrabajofrontEnd#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

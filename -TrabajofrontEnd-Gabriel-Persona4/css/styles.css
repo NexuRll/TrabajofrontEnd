@@ -1,0 +1,291 @@
+/* Reset y estilos generales */
+* { /* usar el asterico significa que afecta a todo el html de la pagina*/
+    margin: 0;
+    padding: 0; /* es el espacio que hay entre el contenido y el borde */
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f9f9f7; /* color de fondo de nuestra mision*/
+    color: #333; /* color de texto */
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #CFD8B3;
+    color: #333; /* color de texto */
+    padding: 1rem 2rem; /* esto es equivalente a decir 10 en vertical y 20 en horizontal, por que 20 por que seria el doble del 1rem */
+    display: flex; /* display flex es para sea mas flexible el header */
+    justify-content: space-between; /* Coloca el primer elemento al inicio y el último al final*/
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    /* esto es para que el header se quede fijo, la barra de arriba pero oculta todo lo demas
+    position: fixed;  Hace que el header se quede fijo 
+    top: 0;           Se queda en la parte superior 
+    left: 0;          Se queda en el borde izquierdo 
+    width: 100%;      Ocupa toda la anchura de la ventana 
+    z-index: 1000;    Asegura que esté por encima de otros elementos 
+    */
+}
+
+.logo {
+    font-size: 1.8rem; /* quiero que el logo sea un poco más grande que el texto normal (font-size)es decir 1.8 mas grande que el texto*/
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 1.5rem; /* Crea un espacio de 1.5 veces el tamaño base hacia la izquierda de cada elemento */
+}
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s;
+}
+
+nav ul li a:hover {
+    opacity: 0.8;
+}
+
+/* seccion hero */
+/*Esto es la imagen de la ensalada del fondo */
+.hero {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');
+    /* Crea una imagen de fondo con dos capas:
+       - Una capa de gradiente negro semi-transparente
+       - Una imagen de ensalada debajo
+       - El gradiente ayuda a que el texto sea más legible */
+
+    background-size: cover;
+    /* Hace que la imagen ocupe todo el espacio disponible
+       sin deformarse, manteniendo su proporción */
+
+    background-position: center;
+    /* Centra la imagen en el medio del contenedor */
+
+    height: 60vh;
+    /* El contenedor ocupa 60% de la altura de la ventana
+       (vh = viewport height) */
+
+    display: flex;
+    /* Hace que el contenido se organice de manera flexible */
+
+    flex-direction: column;
+    /* Organiza el contenido en una columna vertical */
+
+    justify-content: center;
+    /* Centra el contenido verticalmente */
+
+    align-items: center;
+    /* Centra el contenido horizontalmente */
+
+    text-align: center;
+    /* Centra el texto dentro de los elementos */
+
+    color: white;
+    /* El texto será blanco para contrastar con el fondo */
+
+    padding: 0 2rem;
+    /* Espacio de 2rem hacia los lados (horizontal)
+       y 0 hacia arriba y abajo (vertical) , por que vamos hacer que ocupe todo el espacio que le damos*/
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+/* Este es para el unico boton, donde dice mas inforamcion */
+.btn {
+    display: inline-block;
+    background-color: #CFD8B3;
+    color: rgb(0, 0, 0);
+    padding: 0.8rem 1.8rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+/* Este es para darle el efecto de cuando se pasa por arriba el color cambie */
+.btn:hover {
+    background-color: #3a7320;
+    transform: translateY(-3px); /* Hace que el boton suba un poco cuando se pasa por encima */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Sección de características */
+/* esto es para la parte de Nuestra mision*/
+.features {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: #000000;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: #4a8f29;
+    margin-bottom: 1rem;
+}
+
+/* Seccion ¿Que hacemos? */
+.products {
+    padding: 4rem 2rem;
+    background-color: #f0f0e8;
+}
+
+.products h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: #4a8f29;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.product-img {
+    height: 200px;
+    background-color: #ddd;
+    background-size: cover;
+    background-position: center;
+}
+
+.product-info {
+    padding: 1.5rem;
+}
+
+.product-info h3 {
+    margin-bottom: 0.5rem;
+}
+
+.product-info p {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-weight: bold;
+    color: #4a8f29;
+    font-size: 1.2rem;
+}
+
+/* Footer */
+footer {
+    background-color: #CFD8B3;
+    color: rgb(0, 0, 0);
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    text-align: left;
+}
+
+.footer-column h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-column ul li a {
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: rgb(0, 0, 0);
+}
+
+.copyright {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #000000;
+    color: #000000;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+    
+    nav ul {
+        margin-top: 1rem;
+    }
+    
+    nav ul li {
+        margin: 0 0.5rem;
+    }
+    
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+}
