@@ -2,66 +2,22 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Comentarios de Usuarios</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 30px;
-      background-color: #f9f9f9;
-    }
-
-    .comentarios-box {
-      background-color: #fff;
-      border: 1px solid #ddd;
-      padding: 20px;
-      width: 400px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      border-radius: 5px;
-    }
-
-    .comentarios-box h2 {
-      margin-top: 0;
-      font-size: 22px;
-      color: #333;
-    }
-
-    textarea {
-      width: 90%;
-      height: 80px;
-      padding: 10px;
-      font-size: 14px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      resize: none;
-    }
-
-    .btn-publicar {
-      margin-top: 10px;
-      background-color: #28a745;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      font-size: 14px;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-
-    .btn-publicar:hover {
-      background-color: #218838;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comentarios de Usuarios - EcoFood</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+  <script src="../../js/funciones.js"></script>
 </head>
-<body>
+<body class="comentarios-page">
   <div class="comentarios-box"> 
     <h2>Comentarios de Usuarios</h2> 
-    <form id="formComentario" class="mb-4"> 
-    <textarea class="form-control" placeholder="Escribe tu comentario..." 
-    id="comentarioTexto"></textarea> 
-    <button class="btn btn-publicar mt-2">Publicar</button> 
+    <form id="formComentario"> 
+      <input type="text" id="nombreUsuario" class="nombre-usuario" placeholder="Tu nombre..." required>
+      <textarea placeholder="Escribe tu comentario..." id="comentarioTexto" required></textarea> 
+      <button type="submit" class="btn-publicar">Publicar</button> 
     </form> 
-    <div id="comentarios-box"> 
-    <!-- Comentarios agregados dinámicamente --> 
+    <div id="comentarios-container"> 
+      <!-- Comentarios agregados dinámicamente --> 
     </div> 
-    </div> 
+  </div>
 </body>
 </html>

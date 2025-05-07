@@ -1,6 +1,3 @@
-franco:ya creamos un grupo de wasap
-
-
-
-
-Recuerden agregar al profe Ahumadacortesjavier@gmail.com
+Credenciales por defecto
+Correo:admin@gmail.com
+Contraseña:admin

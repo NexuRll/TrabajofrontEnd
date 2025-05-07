@@ -3,103 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Productos Disponibles</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-      background-color: #f9f9f9;
-      display: flex;
-      justify-content: center;
-      min-height: 100vh;
-      margin: 0;
-    }
-
-    .productos-box {
-      background-color: #fff;
-      border: 1px solid #ddd;
-      padding: 25px;
-      width: 100%;
-      max-width: 500px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-    }
-
-    .productos-box h2 {
-      margin-top: 0;
-      margin-bottom: 20px;
-      font-size: 24px;
-      color: #333;
-      text-align: center;
-    }
-
-    .producto-card {
-      background-color: #fcfcfc;
-      border: 1px solid #e0e0e0;
-      padding: 15px;
-      border-radius: 8px;
-      margin-bottom: 15px;
-    }
-
-    .producto-card h3 {
-      margin-top: 0;
-      color: #2c3e50;
-      font-size: 18px;
-    }
-
-    .producto-card p {
-      margin-bottom: 10px;
-      color: #555;
-      font-size: 14px;
-    }
-
-    .producto-card .precio {
-      font-weight: bold;
-      color: #e74c3c;
-      font-size: 16px;
-    }
-
-    .btn-detalle {
-      background-color: #28a745;
-      color: white;
-      border: none;
-      padding: 8px 16px;
-      font-size: 14px;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      display: inline-block;
-      margin-top: 5px;
-    }
-
-    .btn-detalle:hover {
-      background-color: #28a745;
-    }
-  </style>
+  <title>Productos Disponibles - EcoFood</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+  <script src="../../js/funciones.js"></script>
 </head>
-<body>
+<body class="home-page">
   <div class="productos-box"> 
-    <h2>Productos Disponibles</h2> 
-    
-    <div class="producto-card">
-      <h3>Pan de masa madre</h3>
-      <p>Pan de masa madre listo para tus comidas</p>
-      <p class="precio">$2.500</p>
-      <button class="btn-detalle">Ver detalle</button>
-    </div>
-    
-    <div class="producto-card">
-      <h3>Pepinillos</h3>
-      <p>Frasco de pepinillos frescos agridulces de la mejor calidad</p>
-      <p class="precio">$6.000</p>
-      <button class="btn-detalle">Ver detalle</button>
-    </div>
-    
-    <div class="producto-card">
-      <h3>Saco de papa</h3>
-      <p>Saco de 5kg de papas frescas</p>
-      <p class="precio">$3.000</p>
-      <button class="btn-detalle">Ver detalle</button>
+    <h2>Productos Disponibles</h2>
+    <div id="productos-container">
+      <!-- Los productos se cargan desde JavaScript -->
     </div>
   </div>
 </body>
