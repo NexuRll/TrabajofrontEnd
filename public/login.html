@@ -67,7 +67,7 @@
 <body>
     <div class="form-container">
         <h1>Iniciar Sesión</h1>
-        <form action="/login" method="POST">
+        <form action="../public/home.html" method="POST">
             <label for="email">Correo electrónico:</label>
             <input type="email" id="email" name="email" required>
 
@@ -78,5 +78,30 @@
         </form>
         <p>¿No tienes una cuenta? <a href="registro.html">Regístrate aquí</a></p>
     </div>
+    <script>
+        // Usuario por defecto (se guarda si no existe ya)
+        if (!localStorage.getItem('fakeUserEmail')) {
+            localStorage.setItem('fakeUserEmail', 'admin@gmail.com');
+            localStorage.setItem('fakeUserPass', 'admin');
+        }
+    
+        function login() {
+            const email = document.getElementById('email').value;
+            const pass = document.getElementById('password').value;
+    
+            const storedEmail = localStorage.getItem('fakeUserEmail');
+            const storedPass = localStorage.getItem('fakeUserPass');
+    
+            if (email === storedEmail && pass === storedPass) {
+                document.getElementById('msg').style.color = 'green';
+                document.getElementById('msg').textContent = 'Login exitoso!';
+                setTimeout(() => {
+                    window.location.href = 'index.html'; // Redirige a la página principal
+                }, 1500);
+            } else {
+                document.getElementById('msg').textContent = 'Correo o contraseña incorrectos';
+            }
+        }
+    </script>
 </body>
 </html>
