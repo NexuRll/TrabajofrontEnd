@@ -33,7 +33,9 @@ const frases = [
     "Cada pequeño paso cuenta.",
     "Tú puedes lograrlo, sigue adelante.",
     "La sostenibilidad comienza contigo.",
-    "Haz la diferencia, incluso con acciones pequeñas."
+    "Haz la diferencia, incluso con acciones pequeñas.",
+    "Todas mienten, solo la naturaleza nos dice la verdad",
+    "Per aspera ad astra,A través de las espinas hacia las estrellas"
 ];
 
 let fraseActual = -1; // Guardar el índice de la frase actual
@@ -42,9 +44,10 @@ let fraseActual = -1; // Guardar el índice de la frase actual
 function mostrarFraseMotivadora() {
     let indice;
     do {
-        indice = Math.floor(Math.random() * frases.length);
+        indice = Math.floor(Math.random() * frases.length); // ecuacion matematica para buscar una frase random con el length
     } while (frases.length > 1 && indice === fraseActual); // Evita repetir la misma frase
     fraseActual = indice;
+    
     const divFrase = document.getElementById('fraseMotivadora');
     if (divFrase !== null) {
         divFrase.textContent = frases[indice];
@@ -58,8 +61,9 @@ document.addEventListener('DOMContentLoaded', function() {
     redirigir_login();
     redirigir_registro();
     mostrarFraseMotivadora();
+
     const btnNuevaFrase = document.getElementById('btn-nueva-frase');
-    if (btnNuevaFrase) {
+    if (btnNuevaFrase != null) {
         btnNuevaFrase.addEventListener('click', mostrarFraseMotivadora);
-    }
+    } 
 });
